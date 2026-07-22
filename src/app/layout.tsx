@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import JsonLd from "@/components/seo/JsonLd";
+import SmoothScrollProvider from "@/components/layout/SmoothScrollProvider";
 import { BRAND_INFO } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -12,14 +13,14 @@ export const metadata: Metadata = {
     template: "%s | Tirumala Furniture",
   },
   description:
-    "South India's premier destination for 100% Solid Burma Teak wood living room sofas, king storage beds, Italian marble dining tables, and executive office interiors. 10-Year Warranty. Jubilee Hills Flagship Showroom.",
+    "South India's premier destination for 100% Solid Burma Teak wood living room sofas, king storage beds, Italian marble dining tables, and executive office interiors. 10-Year Warranty. Siddipet Flagship Showroom.",
   keywords: [
     "Tirumala Furniture",
-    "Solid Teak Wood Furniture Hyderabad",
-    "Teak Sofa Set Jubilee Hills",
+    "Solid Teak Wood Furniture Siddipet",
+    "Teak Sofa Set Telangana",
     "Italian Marble Dining Table",
     "Teak Storage Bed",
-    "Custom Wardrobes Hyderabad",
+    "Custom Wardrobes Siddipet",
     "Luxury Furniture Showroom",
   ],
   authors: [{ name: BRAND_INFO.name }],
@@ -72,11 +73,13 @@ export default function RootLayout({
         />
         <JsonLd />
       </head>
-      <body className="bg-[#0D0D0D] text-[#E8E6E1] antialiased flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppButton />
+      <body className="bg-[#FAFAF8] text-[#111827] antialiased flex flex-col min-h-screen">
+        <SmoothScrollProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </SmoothScrollProvider>
       </body>
     </html>
   );

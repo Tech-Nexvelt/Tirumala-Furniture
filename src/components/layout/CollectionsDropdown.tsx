@@ -63,7 +63,7 @@ export default function CollectionsDropdown({ onClose }: CollectionsDropdownProp
   ];
 
   return (
-    <div className="absolute top-full left-0 w-80 bg-[#1C1C1C] border border-[#C59D5F]/30 rounded-2xl shadow-2xl z-50 p-3 mt-2 animate-fade-in text-[#E8E6E1]">
+    <div className="absolute top-full left-0 w-80 bg-[#FFFFFF] border border-[#EFEFEA] rounded-2xl shadow-xl z-50 p-3 mt-2 animate-fade-in text-[#111827]">
       <div className="space-y-1">
         {collectionItems.map((item) => {
           const Icon = item.icon;
@@ -72,32 +72,32 @@ export default function CollectionsDropdown({ onClose }: CollectionsDropdownProp
               key={item.id}
               href={item.href}
               onClick={onClose}
-              className="flex items-center gap-3 p-3 rounded-xl hover:bg-[#0D0D0D] transition-all group border border-transparent hover:border-[#C59D5F]/30"
+              className="flex items-center gap-3 p-3 rounded-xl hover:bg-[#F4F4F0] transition-all group border border-transparent hover:border-[#E5E7EB]"
             >
-              <div className="w-9 h-9 rounded-lg bg-[#0D0D0D] text-[#C59D5F] flex items-center justify-center shrink-0 border border-[#C59D5F]/30 group-hover:bg-[#C59D5F] group-hover:text-[#0D0D0D] transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-[#FAFAF8] text-[#C19A6B] flex items-center justify-center shrink-0 border border-[#EFEFEA] group-hover:bg-[#C19A6B] group-hover:text-white transition-colors">
                 <Icon className="w-4 h-4" />
               </div>
 
               <div className="flex-1 min-w-0">
-                <h4 className="font-semibold text-xs text-white group-hover:text-[#DFB978] transition-colors">
+                <h4 className="font-semibold text-xs text-[#111827] group-hover:text-[#C19A6B] transition-colors">
                   {item.label}
                 </h4>
-                <p className="text-[11px] text-gray-400 line-clamp-1 mt-0.5">
+                <p className="text-[11px] text-[#6B7280] line-clamp-1 mt-0.5">
                   {item.desc}
                 </p>
               </div>
 
-              <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-[#C59D5F] group-hover:translate-x-0.5 transition-transform" />
+              <ChevronRight className="w-4 h-4 text-[#9CA3AF] group-hover:text-[#C19A6B] group-hover:translate-x-0.5 transition-transform" />
             </Link>
           );
         })}
       </div>
 
-      <div className="mt-2 pt-2 border-t border-[#0D0D0D] text-center">
+      <div className="mt-2 pt-2 border-t border-[#EFEFEA] text-center">
         <Link
           href="/collections"
           onClick={onClose}
-          className="text-[11px] font-bold uppercase tracking-wider text-[#C59D5F] hover:text-[#DFB978] inline-block py-1"
+          className="text-[11px] font-bold uppercase tracking-wider text-[#C19A6B] hover:text-[#A37C4C] inline-block py-1"
         >
           View All 6 Room Collections →
         </Link>

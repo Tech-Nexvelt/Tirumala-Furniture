@@ -34,7 +34,7 @@ export const UPHOLSTERY_OPTIONS = [
 
 // Solid Wood Polish Options
 export const WOOD_OPTIONS = [
-  { id: "burma_teak", name: "Burma Teak Natural", hex: "#C59D5F", roughness: 0.35 },
+  { id: "burma_teak", name: "Burma Teak Natural", hex: "#C19A6B", roughness: 0.35 },
   { id: "walnut", name: "Royal Walnut Satin", hex: "#3D2314", roughness: 0.3 },
   { id: "dark_walnut", name: "Dark Ebony Walnut", hex: "#1A1A1A", roughness: 0.25 },
   { id: "oak", name: "Heritage Blonde Oak", hex: "#D4A373", roughness: 0.4 },
@@ -96,9 +96,9 @@ function RealSofaModel({
 function SceneLoader() {
   return (
     <Html center>
-      <div className="flex flex-col items-center gap-3 bg-[#0D0D0D]/90 p-5 rounded-2xl border border-[#C59D5F]/40 text-[#DFB978] backdrop-blur-md shadow-2xl">
-        <Rotate3d className="w-8 h-8 animate-spin text-[#C59D5F]" />
-        <span className="text-xs font-bold uppercase tracking-wider text-white">
+      <div className="flex flex-col items-center gap-3 bg-white/95 p-5 rounded-2xl border border-[#EFEFEA] text-[#111827] backdrop-blur-md shadow-lg">
+        <Rotate3d className="w-8 h-8 animate-spin text-[#C19A6B]" />
+        <span className="text-xs font-bold uppercase tracking-wider text-[#111827]">
           Loading 3D Photorealistic Sofa...
         </span>
       </div>
@@ -120,25 +120,25 @@ export default function LuxurySofaConfigurator() {
   };
 
   return (
-    <section className="py-20 bg-[#0D0D0D] text-[#E8E6E1] relative overflow-hidden border-t border-b border-[#1C1C1C]" id="3d-configurator">
+    <section className="py-24 bg-[#FAFAF8] text-[#111827] relative overflow-hidden border-t border-b border-[#EFEFEA]" id="3d-configurator">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#C59D5F] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#C59D5F]/10 border border-[#C59D5F]/30">
-            <Rotate3d className="w-4 h-4 text-[#C59D5F] animate-spin" /> Live WebGL 3D Studio
+          <span className="text-xs font-bold uppercase tracking-widest text-[#C19A6B] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#EFEFEA] shadow-sm">
+            <Rotate3d className="w-4 h-4 text-[#C19A6B] animate-spin" /> Live WebGL 3D Studio
           </span>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-[#111827]">
             Burma Teak Royal Sovereign 3D Configurator
           </h2>
-          <p className="text-sm text-gray-400">
-            Drag to orbit 360° • Pinch/Scroll to zoom • Select PBR Upholstery & Solid Teak wood polishes
+          <p className="text-sm text-[#6B7280]">
+            Drag to orbit 360° • Scroll to zoom • Select PBR Upholstery & Solid Teak wood polishes
           </p>
         </div>
 
         {/* Configurator Layout (Canvas 7 Cols, Swatches 5 Cols) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* R3F WebGL Canvas (7 Cols) */}
-          <div className="lg:col-span-7 relative h-[480px] sm:h-[550px] w-full rounded-3xl overflow-hidden bg-[#1C1C1C] border border-[#C59D5F]/30 shadow-2xl group">
+          <div className="lg:col-span-7 relative h-[480px] sm:h-[550px] w-full rounded-3xl overflow-hidden bg-white border border-[#EFEFEA] shadow-xl group">
             <Canvas
               shadows
               camera={{ position: [0, 1.8, 4.5], fov: 45 }}
@@ -152,7 +152,7 @@ export default function LuxurySofaConfigurator() {
                 shadow-mapSize-width={1024}
                 shadow-mapSize-height={1024}
               />
-              <directionalLight position={[-5, 3, -5]} intensity={0.8} color="#C59D5F" />
+              <directionalLight position={[-5, 3, -5]} intensity={0.8} color="#C19A6B" />
 
               <Suspense fallback={<SceneLoader />}>
                 <Center>
@@ -183,8 +183,8 @@ export default function LuxurySofaConfigurator() {
 
             {/* Top Toolbar */}
             <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-              <div className="bg-[#0D0D0D]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#C59D5F]/40 text-[11px] font-semibold text-[#DFB978] flex items-center gap-1.5 pointer-events-auto">
-                <Rotate3d className="w-3.5 h-3.5" /> 360° Studio Orbit
+              <div className="bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#EFEFEA] text-[11px] font-semibold text-[#111827] flex items-center gap-1.5 pointer-events-auto shadow-sm">
+                <Rotate3d className="w-3.5 h-3.5 text-[#C19A6B]" /> 360° Studio Orbit
               </div>
 
               <div className="flex items-center gap-2 pointer-events-auto">
@@ -193,8 +193,8 @@ export default function LuxurySofaConfigurator() {
                   onClick={() => setAutoRotate(!autoRotate)}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-semibold backdrop-blur-md border transition-all ${
                     autoRotate
-                      ? "bg-[#C59D5F] text-[#0D0D0D] border-[#C59D5F] font-bold"
-                      : "bg-[#0D0D0D]/80 text-[#E8E6E1] border-gray-700 hover:border-[#C59D5F]"
+                      ? "bg-[#C19A6B] text-white border-[#C19A6B] font-bold"
+                      : "bg-white/90 text-[#111827] border-[#E5E7EB] hover:border-[#C19A6B]"
                   }`}
                 >
                   {autoRotate ? "Auto-Rotating" : "Paused"}
@@ -203,7 +203,7 @@ export default function LuxurySofaConfigurator() {
                 <button
                   type="button"
                   onClick={handleResetCamera}
-                  className="p-2 rounded-full bg-[#0D0D0D]/80 hover:bg-[#0D0D0D] text-white border border-gray-700 hover:border-[#C59D5F] transition-colors"
+                  className="p-2 rounded-full bg-white/90 hover:bg-white text-[#111827] border border-[#E5E7EB] hover:border-[#C19A6B] transition-colors shadow-sm"
                   title="Reset Camera View"
                 >
                   <RefreshCw className="w-4 h-4" />
@@ -212,26 +212,26 @@ export default function LuxurySofaConfigurator() {
             </div>
 
             {/* Dimensions Overlay */}
-            <div className="absolute bottom-4 left-4 bg-[#0D0D0D]/90 backdrop-blur-md p-3.5 rounded-2xl border border-[#1C1C1C] text-xs text-gray-300">
-              <span className="text-[10px] font-bold uppercase text-[#C59D5F] block">Sofa Dimensions</span>
-              <span className="font-mono text-white block font-bold text-sm">88&quot; L × 38&quot; W × 36&quot; H (Seat H: 18&quot;)</span>
+            <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-[#EFEFEA] text-xs text-[#6B7280] shadow-sm">
+              <span className="text-[10px] font-bold uppercase text-[#C19A6B] block">Sofa Dimensions</span>
+              <span className="font-mono text-[#111827] block font-bold text-sm">88&quot; L × 38&quot; W × 36&quot; H (Seat H: 18&quot;)</span>
             </div>
           </div>
 
           {/* Swatches & Detail Panel (5 Cols) */}
-          <div className="lg:col-span-5 bg-[#1C1C1C] p-8 rounded-3xl border border-[#C59D5F]/30 shadow-2xl space-y-6">
+          <div className="lg:col-span-5 bg-white p-8 rounded-3xl border border-[#EFEFEA] shadow-xl space-y-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#C59D5F] flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" /> 100% Solid Burma Teak Wood
+              <span className="text-xs font-bold uppercase tracking-wider text-[#C19A6B] flex items-center gap-1.5">
+                <ShieldCheck className="w-4 h-4 text-emerald-600" /> 100% Solid Burma Teak Wood
               </span>
-              <h3 className="text-2xl font-serif font-bold text-white mt-1">Sovereign 3-Seater Recliner</h3>
-              <span className="text-2xl font-bold text-white block mt-1">{formatPrice(145000)}</span>
+              <h3 className="text-2xl font-serif font-bold text-[#111827] mt-1">Sovereign 3-Seater Recliner</h3>
+              <span className="text-2xl font-bold text-[#111827] block mt-1">{formatPrice(145000)}</span>
             </div>
 
             {/* Upholstery Swatches */}
             <div className="space-y-2.5">
-              <span className="text-xs font-bold uppercase text-gray-400 block">
-                Upholstery Material: <span className="text-[#DFB978]">{selectedUpholstery.name}</span>
+              <span className="text-xs font-bold uppercase text-[#6B7280] block">
+                Upholstery Material: <span className="text-[#111827]">{selectedUpholstery.name}</span>
               </span>
               <div className="flex flex-wrap items-center gap-2.5">
                 {UPHOLSTERY_OPTIONS.map((fab) => (
@@ -241,7 +241,7 @@ export default function LuxurySofaConfigurator() {
                     onClick={() => setSelectedUpholstery(fab)}
                     className={`w-10 h-10 rounded-full border-2 transition-all relative flex items-center justify-center cursor-pointer ${
                       selectedUpholstery.id === fab.id
-                        ? "border-[#C59D5F] scale-110 shadow-gold"
+                        ? "border-[#C19A6B] scale-110 shadow-md"
                         : "border-transparent hover:scale-105"
                     }`}
                     style={{ backgroundColor: fab.hex }}
@@ -255,8 +255,8 @@ export default function LuxurySofaConfigurator() {
 
             {/* Teak Wood Polish Swatches */}
             <div className="space-y-2.5">
-              <span className="text-xs font-bold uppercase text-gray-400 block">
-                Teak Wood Polish: <span className="text-[#DFB978]">{selectedWood.name}</span>
+              <span className="text-xs font-bold uppercase text-[#6B7280] block">
+                Teak Wood Polish: <span className="text-[#111827]">{selectedWood.name}</span>
               </span>
               <div className="flex flex-wrap items-center gap-2.5">
                 {WOOD_OPTIONS.map((wood) => (
@@ -266,7 +266,7 @@ export default function LuxurySofaConfigurator() {
                     onClick={() => setSelectedWood(wood)}
                     className={`w-10 h-10 rounded-full border-2 transition-all relative flex items-center justify-center cursor-pointer ${
                       selectedWood.id === wood.id
-                        ? "border-[#C59D5F] scale-110 shadow-gold"
+                        ? "border-[#C19A6B] scale-110 shadow-md"
                         : "border-transparent hover:scale-105"
                     }`}
                     style={{ backgroundColor: wood.hex }}
@@ -279,13 +279,13 @@ export default function LuxurySofaConfigurator() {
             </div>
 
             {/* Spec Highlights */}
-            <div className="space-y-2 text-xs text-gray-300 pt-2 border-t border-[#0D0D0D]">
+            <div className="space-y-2 text-xs text-[#6B7280] pt-2 border-t border-[#EFEFEA]">
               <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                <Check className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>10-Year Anti-Termite & Structural Guarantee</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                <Check className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Bespoke Dimensions Tailored on Request</span>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function LuxurySofaConfigurator() {
               <button
                 type="button"
                 onClick={() => setIsQuoteOpen(true)}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-[#DFB978] via-[#C59D5F] to-[#9A7336] text-[#0D0D0D] font-bold text-xs shadow-gold hover:scale-[1.02] transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer"
+                className="w-full py-4 rounded-xl bg-[#00D9D9] hover:bg-[#00B8B8] text-[#111827] font-bold text-xs shadow-gold hover:scale-[1.02] transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer"
               >
                 <Sparkles className="w-4 h-4" /> Request Official Quote
               </button>
@@ -304,7 +304,7 @@ export default function LuxurySofaConfigurator() {
                 href={createWhatsAppUrl(`Hi Tirumala Furniture, I customized the Sovereign 3D Sofa in ${selectedUpholstery.name} with ${selectedWood.name}. Please share quote.`)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
+                className="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm transition-all"
               >
                 <MessageSquare className="w-4 h-4" /> WhatsApp 3D Enquiry
               </a>

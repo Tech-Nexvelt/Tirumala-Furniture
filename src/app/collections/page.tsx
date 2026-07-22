@@ -11,17 +11,17 @@ export const metadata = {
 
 export default function CollectionsPage() {
   return (
-    <div className="bg-[#0D0D0D] text-[#E8E6E1] min-h-screen py-24">
+    <div className="bg-[#FAFAF8] text-[#111827] min-h-screen py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Page Hero Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#C59D5F] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#C59D5F]/10 border border-[#C59D5F]/30">
-            <Sparkles className="w-4 h-4 text-[#C59D5F]" /> Handcrafted Masterpieces
+          <span className="text-xs font-bold uppercase tracking-widest text-[#C19A6B] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#EFEFEA] shadow-sm">
+            <Sparkles className="w-4 h-4 text-[#C19A6B]" /> Handcrafted Masterpieces
           </span>
-          <h1 className="text-4xl sm:text-6xl font-serif font-bold text-white tracking-tight">
+          <h1 className="text-4xl sm:text-6xl font-serif font-bold text-[#111827] tracking-tight">
             Curated Teak Wood Collections
           </h1>
-          <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-[#6B7280] text-sm sm:text-base leading-relaxed">
             Every piece is crafted from 100% Grade-A Burma & CP Teak logs, kiln-seasoned for 45 days, and built with mortise & tenon joinery for multi-generational elegance.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function CollectionsPage() {
             return (
               <div
                 key={cat.id}
-                className={`bg-[#1C1C1C] rounded-3xl border border-[#C59D5F]/30 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center group hover:border-[#C59D5F] transition-all duration-500`}
+                className="bg-white rounded-3xl border border-[#EFEFEA] overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center group hover:border-[#C19A6B] transition-all duration-500"
               >
                 {/* Collection Photography (7 cols) */}
                 <div
@@ -48,8 +48,8 @@ export default function CollectionsPage() {
                     sizes="(max-width: 1024px) 100vw, 58vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/70 via-transparent to-transparent" />
-                  <span className="absolute bottom-4 left-4 text-xs font-bold text-[#DFB978] bg-[#0D0D0D]/90 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-[#C59D5F]/40">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  <span className="absolute bottom-4 left-4 text-xs font-bold text-[#111827] bg-white/95 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-[#EFEFEA] shadow-sm">
                     {cat.count}+ Exclusive Furniture Models
                   </span>
                 </div>
@@ -61,17 +61,17 @@ export default function CollectionsPage() {
                   }`}
                 >
                   <div className="space-y-3">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#C59D5F] flex items-center gap-1.5">
-                      <ShieldCheck className="w-4 h-4 text-emerald-400" /> 10-Year Warranty
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#C19A6B] flex items-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-emerald-600" /> 10-Year Warranty
                     </span>
-                    <h2 className="text-3xl font-serif font-bold text-white">{cat.name}</h2>
-                    <p className="text-sm text-gray-300 leading-relaxed">{cat.description}</p>
+                    <h2 className="text-3xl font-serif font-bold text-[#111827]">{cat.name}</h2>
+                    <p className="text-sm text-[#6B7280] leading-relaxed">{cat.description}</p>
                   </div>
 
-                  <div className="pt-4 border-t border-[#0D0D0D]">
+                  <div className="pt-4 border-t border-[#EFEFEA]">
                     <Link
                       href={`/collections/${cat.id}`}
-                      className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#DFB978] via-[#C59D5F] to-[#9A7336] text-[#0D0D0D] font-bold text-xs shadow-gold hover:scale-105 transition-all uppercase tracking-wider"
+                      className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#00D9D9] hover:bg-[#00B8B8] text-[#111827] font-bold text-xs shadow-gold hover:scale-105 transition-all uppercase tracking-wider"
                     >
                       Explore {cat.name} Collection <ArrowRight className="w-4 h-4" />
                     </Link>
