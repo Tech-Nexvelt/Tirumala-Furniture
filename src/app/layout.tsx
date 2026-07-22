@@ -45,6 +45,11 @@ export const metadata: Metadata = {
     description: "Handcrafted 100% Solid Teak Wood furniture with 10-Year Warranty.",
     images: ["https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"],
   },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   robots: {
     index: true,
     follow: true,
