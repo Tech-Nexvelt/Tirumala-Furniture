@@ -8,7 +8,6 @@ export default function BrandedPreloader() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate smooth progress loading
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -34,7 +33,7 @@ export default function BrandedPreloader() {
     >
       <div className="flex flex-col items-center space-y-6 animate-fade-in text-center px-4">
         {/* Animated Brand Logo Mark */}
-        <div className="relative w-20 h-20 animate-pulse">
+        <div className="relative w-16 sm:w-20 h-16 sm:h-20 animate-pulse">
           <Image
             src="/logo.png"
             alt="Tirumala Furniture Monogram"
@@ -47,19 +46,19 @@ export default function BrandedPreloader() {
 
         {/* Brand Name */}
         <div className="space-y-1">
-          <h2 className="font-serif font-bold tracking-[0.25em] text-xl text-[#111827]">
+          <h2 className="font-serif font-bold tracking-[0.25em] text-lg sm:text-xl text-[#111827]">
             TIRUMALA FURNITURE
           </h2>
-          <p className="text-[10px] tracking-[0.35em] text-[#C19A6B] font-semibold uppercase">
+          <p className="text-[10px] tracking-[0.35em] text-[#8B5E3C] font-bold uppercase">
             Crafted for Generations
           </p>
         </div>
 
         {/* Progress Bar Container */}
         <div className="w-48 space-y-2 pt-4">
-          <div className="h-[2px] w-full bg-[#EFEFEA] rounded-full overflow-hidden">
+          <div className="h-[2px] w-full bg-[#E5E7EB] rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-[#C19A6B] to-[#00D9D9] transition-all duration-200 ease-out"
+              className="h-full bg-[#8B5E3C] transition-all duration-200 ease-out"
               style={{ width: `${progress}%` }}
             />
           </div>

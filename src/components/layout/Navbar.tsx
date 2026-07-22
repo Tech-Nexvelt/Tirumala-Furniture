@@ -35,17 +35,17 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Sleek Minimal Luxury Header */}
+      {/* Sleek Header */}
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           scrolled
-            ? "bg-[#FAFAF8]/95 backdrop-blur-xl border-b border-[#EFEFEA] py-3.5 shadow-sm"
-            : "bg-[#FAFAF8]/80 backdrop-blur-md border-b border-[#EFEFEA]/60 py-4.5"
+            ? "bg-[#FAFAF8]/95 backdrop-blur-xl border-b border-[#E5E7EB] py-3.5 shadow-sm"
+            : "bg-[#FAFAF8]/80 backdrop-blur-md border-b border-[#E5E7EB]/60 py-4.5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center group">
+          <Link href="/" className="flex items-center group py-0.5">
             <Logo showTagline={false} />
           </Link>
 
@@ -64,14 +64,14 @@ export default function Navbar() {
                   >
                     <button
                       onClick={() => setShowDropdown(!showDropdown)}
-                      className={`text-xs font-semibold uppercase tracking-wider flex items-center gap-1 transition-colors ${
-                        isActive ? "text-[#C19A6B] font-bold" : "text-[#111827] hover:text-[#C19A6B]"
+                      className={`text-xs font-bold uppercase tracking-wider flex items-center gap-1 transition-colors ${
+                        isActive ? "text-[#8B5E3C]" : "text-[#111827] hover:text-[#8B5E3C]"
                       }`}
                     >
                       {link.label}
                       <ChevronDown
                         className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                          showDropdown ? "rotate-180 text-[#C19A6B]" : ""
+                          showDropdown ? "rotate-180 text-[#8B5E3C]" : ""
                         }`}
                       />
                     </button>
@@ -86,8 +86,8 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`text-xs font-semibold uppercase tracking-wider transition-colors ${
-                    isActive ? "text-[#C19A6B] font-bold" : "text-[#111827] hover:text-[#C19A6B]"
+                  className={`text-xs font-bold uppercase tracking-wider transition-colors ${
+                    isActive ? "text-[#8B5E3C]" : "text-[#111827] hover:text-[#8B5E3C]"
                   }`}
                 >
                   {link.label}
@@ -100,7 +100,7 @@ export default function Navbar() {
           <div className="hidden sm:flex items-center gap-4">
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="p-2 text-[#111827] hover:text-[#C19A6B] transition-colors"
+              className="p-2 text-[#111827] hover:text-[#8B5E3C] transition-colors"
               title="Search Catalog"
               aria-label="Search catalog"
             >
@@ -109,16 +109,16 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="px-4.5 py-2.5 rounded-xl text-xs font-semibold tracking-wider text-[#111827] border border-[#E5E7EB] hover:border-[#C19A6B] hover:bg-[#FFFFFF] transition-all uppercase"
+              className="px-4.5 py-2.5 rounded-xl text-xs font-bold tracking-wider text-[#111827] border border-[#E5E7EB] hover:border-[#8B5E3C] hover:bg-[#FFFFFF] transition-all uppercase"
             >
               Book Visit
             </Link>
 
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="px-5 py-2.5 rounded-xl bg-[#00D9D9] hover:bg-[#00B8B8] text-[#111827] font-bold text-xs shadow-gold hover:scale-105 transition-all uppercase tracking-wider flex items-center gap-1.5 cursor-pointer"
+              className="px-5 py-2.5 rounded-xl bg-[#8B5E3C] hover:bg-[#6E472B] text-white font-bold text-xs shadow-gold hover:scale-105 transition-all uppercase tracking-wider flex items-center gap-1.5 cursor-pointer"
             >
-              <Sparkles className="w-3.5 h-3.5" /> Request Quote
+              <Sparkles className="w-3.5 h-3.5 text-[#C19A6B]" /> Request Quote
             </button>
           </div>
 
@@ -126,13 +126,13 @@ export default function Navbar() {
           <div className="flex md:hidden items-center gap-3">
             <button
               onClick={() => setIsQuoteOpen(true)}
-              className="px-3 py-1.5 rounded-lg bg-[#00D9D9] text-[#111827] font-bold text-xs uppercase"
+              className="px-3 py-1.5 rounded-lg bg-[#8B5E3C] text-white font-bold text-xs uppercase"
             >
               Quote
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-[#111827] hover:text-[#C19A6B]"
+              className="p-2 text-[#111827] hover:text-[#8B5E3C]"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -142,14 +142,14 @@ export default function Navbar() {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-[#FAFAF8] border-b border-[#EFEFEA] px-6 py-6 space-y-4 animate-fade-in text-[#111827]">
-            <div className="flex flex-col space-y-3 pb-4 border-b border-[#EFEFEA]">
+          <div className="md:hidden bg-[#FAFAF8] border-b border-[#E5E7EB] px-6 py-6 space-y-4 animate-fade-in text-[#111827]">
+            <div className="flex flex-col space-y-3 pb-4 border-b border-[#E5E7EB]">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="py-2 text-sm font-semibold uppercase tracking-wider text-[#111827] hover:text-[#C19A6B]"
+                  className="py-2 text-sm font-bold uppercase tracking-wider text-[#111827] hover:text-[#8B5E3C]"
                 >
                   {link.label}
                 </Link>
@@ -170,7 +170,7 @@ export default function Navbar() {
                   setIsMobileMenuOpen(false);
                   setIsQuoteOpen(true);
                 }}
-                className="w-full py-3 rounded-xl bg-[#00D9D9] text-[#111827] font-bold text-xs uppercase tracking-wider text-center block shadow-sm"
+                className="w-full py-3 rounded-xl bg-[#8B5E3C] text-white font-bold text-xs uppercase tracking-wider text-center block shadow-sm"
               >
                 Request Custom Quotation
               </button>

@@ -29,12 +29,12 @@ export default function BeforeAfterSlider() {
   };
 
   return (
-    <section className="py-24 bg-[#FAFAF8] text-[#111827] relative border-t border-b border-[#EFEFEA]">
+    <section className="py-24 bg-[#FAFAF8] text-[#111827] relative border-t border-b border-[#E5E7EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#C19A6B] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#EFEFEA] shadow-sm">
-            <Sparkles className="w-4 h-4 text-[#C19A6B]" /> Architectural Transformation
+          <span className="text-xs font-bold uppercase tracking-widest text-[#8B5E3C] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#E5E7EB] shadow-sm">
+            <Sparkles className="w-4 h-4 text-[#8B5E3C]" /> Architectural Transformation
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#111827]">
             Before & After Room Transformation
@@ -52,7 +52,7 @@ export default function BeforeAfterSlider() {
           onMouseLeave={() => setIsDragging(false)}
           onMouseMove={handleMouseMove}
           onTouchMove={handleTouchMove}
-          className="relative h-[400px] sm:h-[540px] w-full rounded-3xl overflow-hidden border border-[#EFEFEA] shadow-2xl select-none cursor-ew-resize group"
+          className="relative h-[400px] sm:h-[540px] w-full rounded-3xl overflow-hidden border border-[#E5E7EB] shadow-2xl select-none cursor-ew-resize group"
         >
           {/* AFTER Image (Full background) */}
           <div className="absolute inset-0 w-full h-full">
@@ -63,7 +63,7 @@ export default function BeforeAfterSlider() {
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute top-6 right-6 bg-[#00D9D9] text-[#111827] text-xs font-bold px-4 py-1.5 rounded-full shadow-md">
+            <div className="absolute top-6 right-6 bg-[#8B5E3C] text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-md">
               AFTER: Tirumala Teak Sanctuary
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function BeforeAfterSlider() {
                 className="object-cover filter contrast-90"
               />
             </div>
-            <div className="absolute top-6 left-6 bg-white/95 text-[#111827] text-xs font-bold px-4 py-1.5 rounded-full shadow-md border border-[#EFEFEA]">
+            <div className="absolute top-6 left-6 bg-white/95 text-[#111827] text-xs font-bold px-4 py-1.5 rounded-full shadow-md border border-[#E5E7EB]">
               BEFORE: Bare Space
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function BeforeAfterSlider() {
             style={{ left: `${sliderPosition}%` }}
           >
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#111827] text-white flex items-center justify-center shadow-xl border-2 border-white">
-              <MoveHorizontal className="w-5 h-5 text-[#C19A6B]" />
+              <MoveHorizontal className="w-5 h-5 text-[#8B5E3C]" />
             </div>
           </div>
         </div>

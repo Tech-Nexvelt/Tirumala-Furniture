@@ -70,7 +70,9 @@ export default function CommandMenu({ isOpen, onClose }: CommandMenuProps) {
                   </h4>
                   <span className="text-xs text-[#6B7280] block">{item.woodType}</span>
                 </div>
-                <span className="font-bold text-sm text-[#111827] shrink-0">{formatPrice(item.price)}</span>
+                <span className="font-bold text-xs text-[#8B5E3C] bg-[#8B5E3C]/10 px-2.5 py-1 rounded-full border border-[#8B5E3C]/20 shrink-0">
+                  Price on Request
+                </span>
                 <ChevronRight className="w-4 h-4 text-gray-400 group-hover:translate-x-1 transition-transform" />
               </Link>
             ))}

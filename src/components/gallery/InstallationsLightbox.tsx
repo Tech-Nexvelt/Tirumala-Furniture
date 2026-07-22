@@ -59,12 +59,12 @@ export default function InstallationsLightbox() {
   const [activeImage, setActiveImage] = useState<typeof CUSTOMER_INSTALLATIONS[0] | null>(null);
 
   return (
-    <section className="py-24 bg-[#FAFAF8] text-[#111827] relative border-t border-b border-[#EFEFEA]" id="gallery">
+    <section className="py-24 bg-[#FAFAF8] text-[#111827] relative border-t border-b border-[#E5E7EB]" id="gallery">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#C19A6B] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#EFEFEA] shadow-sm">
-            <Camera className="w-4 h-4 text-[#C19A6B]" /> Authentic Home Transformations
+          <span className="text-xs font-bold uppercase tracking-widest text-[#8B5E3C] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#E5E7EB] shadow-sm">
+            <Camera className="w-4 h-4 text-[#8B5E3C]" /> Authentic Home Transformations
           </span>
           <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#111827]">
             Verified Customer Installations
@@ -80,7 +80,7 @@ export default function InstallationsLightbox() {
             <div
               key={item.id}
               onClick={() => setActiveImage(item)}
-              className="relative h-80 w-full rounded-3xl overflow-hidden shadow-sm hover:shadow-luxury border border-[#EFEFEA] hover:border-[#C19A6B] transition-all duration-300 group cursor-pointer bg-white"
+              className="relative h-80 w-full rounded-3xl overflow-hidden shadow-sm hover:shadow-luxury border border-[#E5E7EB] hover:border-[#8B5E3C] transition-all duration-300 group cursor-pointer bg-white"
             >
               <Image
                 src={item.url}
@@ -111,10 +111,10 @@ export default function InstallationsLightbox() {
       {/* Lightbox Modal */}
       {activeImage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl relative border border-[#EFEFEA]">
+          <div className="bg-white rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl relative border border-[#E5E7EB]">
             <button
               onClick={() => setActiveImage(null)}
-              className="absolute top-4 right-4 z-20 p-2 text-white bg-black/60 rounded-full hover:bg-black"
+              className="absolute top-4 right-4 z-20 p-2 text-white bg-black/60 rounded-full hover:bg-black cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -131,28 +131,28 @@ export default function InstallationsLightbox() {
 
               <div className="md:col-span-4 p-8 space-y-4 flex flex-col justify-between bg-white text-[#111827]">
                 <div className="space-y-3">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#C19A6B]">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#8B5E3C]">
                     Verified Installation
                   </span>
                   <h3 className="text-xl font-serif font-bold">{activeImage.title}</h3>
-                  <div className="space-y-2 text-xs text-[#6B7280] border-t border-[#EFEFEA] pt-3">
+                  <div className="space-y-2 text-xs text-[#6B7280] border-t border-[#E5E7EB] pt-3">
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-[#C19A6B]" />
+                      <MapPin className="w-4 h-4 text-[#8B5E3C]" />
                       <span>{activeImage.location}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4 text-[#C19A6B]" />
+                      <Calendar className="w-4 h-4 text-[#8B5E3C]" />
                       <span>{activeImage.date}</span>
                     </div>
                   </div>
-                  <div className="p-3 rounded-2xl bg-[#FAFAF8] border border-[#EFEFEA] text-xs font-semibold text-[#111827]">
+                  <div className="p-3 rounded-2xl bg-[#FAFAF8] border border-[#E5E7EB] text-xs font-semibold text-[#111827]">
                     Item: {activeImage.furnitureUsed}
                   </div>
                 </div>
 
                 <a
                   href="/contact"
-                  className="w-full py-3.5 rounded-xl bg-[#00D9D9] hover:bg-[#00B8B8] text-[#111827] font-bold text-xs uppercase tracking-wider text-center block shadow-gold"
+                  className="w-full py-3.5 rounded-xl bg-[#8B5E3C] hover:bg-[#6E472B] text-white font-bold text-xs uppercase tracking-wider text-center block shadow-gold"
                 >
                   Request Similar Customization
                 </a>

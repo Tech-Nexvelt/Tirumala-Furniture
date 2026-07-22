@@ -76,12 +76,12 @@ export default function CraftsmanshipStory() {
   const currentStage = STAGES[activeStage];
 
   return (
-    <section className="py-24 bg-[#FAFAF8] text-[#111827] relative border-t border-b border-[#EFEFEA]" id="craftsmanship">
+    <section className="py-24 bg-[#FAFAF8] text-[#111827] relative border-t border-b border-[#E5E7EB]" id="craftsmanship">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#C19A6B] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#EFEFEA] shadow-sm">
-            <Sparkles className="w-4 h-4 text-[#C19A6B]" /> Uncompromising Engineering
+          <span className="text-xs font-bold uppercase tracking-widest text-[#8B5E3C] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#E5E7EB] shadow-sm">
+            <Sparkles className="w-4 h-4 text-[#8B5E3C]" /> Uncompromising Engineering
           </span>
           <h2 className="text-3xl sm:text-5xl font-serif font-bold text-[#111827]">
             Crafted to Last Generations
@@ -92,16 +92,16 @@ export default function CraftsmanshipStory() {
         </div>
 
         {/* Timeline Stage Tabs */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none border-b border-[#EFEFEA]">
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none border-b border-[#E5E7EB]">
           {STAGES.map((stg, idx) => (
             <button
               key={stg.id}
               type="button"
               onClick={() => setActiveStage(idx)}
-              className={`px-4 py-2.5 rounded-xl text-xs font-semibold tracking-wider transition-all whitespace-nowrap flex items-center gap-2 cursor-pointer ${
+              className={`px-4 py-2.5 rounded-xl text-xs font-bold tracking-wider transition-all whitespace-nowrap flex items-center gap-2 cursor-pointer ${
                 activeStage === idx
-                  ? "bg-[#C19A6B] text-white font-bold shadow-md"
-                  : "bg-white text-[#111827] border border-[#E5E7EB] hover:border-[#C19A6B]"
+                  ? "bg-[#8B5E3C] text-white shadow-md"
+                  : "bg-white text-[#111827] border border-[#E5E7EB] hover:border-[#8B5E3C]"
               }`}
             >
               <span className="opacity-70">{stg.step}</span>
@@ -111,11 +111,11 @@ export default function CraftsmanshipStory() {
         </div>
 
         {/* Spotlight Active Stage Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 sm:p-12 rounded-3xl border border-[#EFEFEA] shadow-xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 sm:p-12 rounded-3xl border border-[#E5E7EB] shadow-xl">
           {/* Stage Details (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-2">
-              <span className="text-xs font-mono font-bold text-[#C19A6B] block uppercase tracking-widest">
+              <span className="text-xs font-mono font-bold text-[#8B5E3C] block uppercase tracking-widest">
                 Stage {currentStage.step} of 07
               </span>
               <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#111827]">
@@ -127,18 +127,18 @@ export default function CraftsmanshipStory() {
               {currentStage.desc}
             </p>
 
-            <div className="flex items-center gap-2.5 p-3.5 rounded-2xl bg-[#FAFAF8] border border-[#EFEFEA] text-xs text-[#111827] font-semibold">
+            <div className="flex items-center gap-2.5 p-3.5 rounded-2xl bg-[#FAFAF8] border border-[#E5E7EB] text-xs text-[#111827] font-semibold">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
               <span>{currentStage.detail}</span>
             </div>
 
             {/* Stage Navigation Controls */}
-            <div className="flex items-center gap-3 pt-4 border-t border-[#EFEFEA]">
+            <div className="flex items-center gap-3 pt-4 border-t border-[#E5E7EB]">
               <button
                 type="button"
                 disabled={activeStage === 0}
                 onClick={() => setActiveStage((prev) => prev - 1)}
-                className="px-4 py-2 rounded-xl border border-[#E5E7EB] text-xs font-semibold hover:border-[#C19A6B] disabled:opacity-40 disabled:cursor-not-allowed"
+                className="px-4 py-2 rounded-xl border border-[#E5E7EB] text-xs font-semibold hover:border-[#8B5E3C] disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 ← Previous Stage
               </button>
@@ -146,7 +146,7 @@ export default function CraftsmanshipStory() {
                 type="button"
                 disabled={activeStage === STAGES.length - 1}
                 onClick={() => setActiveStage((prev) => prev + 1)}
-                className="px-4 py-2 rounded-xl bg-[#00D9D9] text-[#111827] text-xs font-bold hover:bg-[#00B8B8] disabled:opacity-40 disabled:cursor-not-allowed"
+                className="px-4 py-2 rounded-xl bg-[#8B5E3C] text-white text-xs font-bold hover:bg-[#6E472B] disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
               >
                 Next Stage →
               </button>
@@ -154,7 +154,7 @@ export default function CraftsmanshipStory() {
           </div>
 
           {/* Stage Image Showcase (7 cols) */}
-          <div className="lg:col-span-7 relative h-[360px] sm:h-[440px] w-full rounded-2xl overflow-hidden border border-[#EFEFEA] bg-[#FAFAF8] shadow-sm">
+          <div className="lg:col-span-7 relative h-[360px] sm:h-[440px] w-full rounded-2xl overflow-hidden border border-[#E5E7EB] bg-[#FAFAF8] shadow-sm">
             <Image
               src={currentStage.image}
               alt={currentStage.title}

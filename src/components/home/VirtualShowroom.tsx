@@ -26,7 +26,7 @@ export default function VirtualShowroom() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Showroom Image Showcase */}
-          <div className="relative h-[480px] w-full rounded-3xl overflow-hidden shadow-xl border border-[#EFEFEA] group">
+          <div className="relative h-[480px] w-full rounded-3xl overflow-hidden shadow-xl border border-[#E5E7EB] group">
             <Image
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
               alt="Tirumala Furniture Siddipet Flagship Showroom"
@@ -36,8 +36,8 @@ export default function VirtualShowroom() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-            <div className="absolute top-4 left-4 bg-white/95 text-[#C19A6B] text-xs font-bold px-3.5 py-1.5 rounded-full backdrop-blur-md flex items-center gap-1.5 border border-[#EFEFEA] shadow-sm">
-              <Building2 className="w-4 h-4 text-[#C19A6B]" /> Flagship Experience Center
+            <div className="absolute top-4 left-4 bg-white/95 text-[#8B5E3C] text-xs font-bold px-3.5 py-1.5 rounded-full backdrop-blur-md flex items-center gap-1.5 border border-[#E5E7EB] shadow-sm">
+              <Building2 className="w-4 h-4 text-[#8B5E3C]" /> Flagship Experience Center
             </div>
 
             <div className="absolute bottom-6 left-6 right-6 text-white space-y-2">
@@ -50,7 +50,7 @@ export default function VirtualShowroom() {
 
           {/* Right: Showroom Experience Details & Booking */}
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#EFEFEA] text-[#C19A6B] text-xs font-bold uppercase tracking-wider shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E7EB] text-[#8B5E3C] text-xs font-bold uppercase tracking-wider shadow-sm">
               <Sparkles className="w-3.5 h-3.5" /> Touch & Feel Quality
             </div>
 
@@ -64,23 +64,23 @@ export default function VirtualShowroom() {
 
             {/* Showroom Amenities Grid */}
             <div className="grid grid-cols-2 gap-4 pt-2">
-              <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-[#EFEFEA] shadow-sm">
-                <Car className="w-5 h-5 text-[#C19A6B] shrink-0" />
+              <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm">
+                <Car className="w-5 h-5 text-[#8B5E3C] shrink-0" />
                 <span className="text-xs font-semibold text-[#111827]">Complimentary Parking</span>
               </div>
 
-              <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-[#EFEFEA] shadow-sm">
-                <Coffee className="w-5 h-5 text-[#C19A6B] shrink-0" />
+              <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm">
+                <Coffee className="w-5 h-5 text-[#8B5E3C] shrink-0" />
                 <span className="text-xs font-semibold text-[#111827]">VIP Customer Lounge</span>
               </div>
 
-              <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-[#EFEFEA] shadow-sm">
-                <Users className="w-5 h-5 text-[#C19A6B] shrink-0" />
+              <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm">
+                <Users className="w-5 h-5 text-[#8B5E3C] shrink-0" />
                 <span className="text-xs font-semibold text-[#111827]">Architect & Designer Desk</span>
               </div>
 
-              <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-[#EFEFEA] shadow-sm">
-                <Clock className="w-5 h-5 text-[#C19A6B] shrink-0" />
+              <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-[#E5E7EB] shadow-sm">
+                <Clock className="w-5 h-5 text-[#8B5E3C] shrink-0" />
                 <span className="text-xs font-semibold text-[#111827]">Open 7 Days: 10 AM – 9 PM</span>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function VirtualShowroom() {
               <button
                 type="button"
                 onClick={() => setShowModal(true)}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#00D9D9] hover:bg-[#00B8B8] text-[#111827] font-bold text-xs shadow-gold hover:scale-105 transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#8B5E3C] hover:bg-[#6E472B] text-white font-bold text-xs shadow-gold hover:scale-105 transition-all flex items-center justify-center gap-2 uppercase tracking-wider cursor-pointer"
               >
                 <Calendar className="w-4 h-4" /> Schedule VIP Showroom Appointment
               </button>
@@ -102,14 +102,14 @@ export default function VirtualShowroom() {
       {/* Appointment Modal */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-[#EFEFEA] text-[#111827]">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-[#E5E7EB] text-[#111827]">
             <button
               type="button"
               onClick={() => {
                 setShowModal(false);
                 setBookingSubmitted(false);
               }}
-              className="absolute top-4 right-4 text-[#9CA3AF] hover:text-[#111827] font-bold"
+              className="absolute top-4 right-4 text-[#9CA3AF] hover:text-[#111827] font-bold cursor-pointer"
             >
               ✕
             </button>
@@ -117,7 +117,7 @@ export default function VirtualShowroom() {
             {!bookingSubmitted ? (
               <form onSubmit={handleBooking} className="space-y-4">
                 <div className="text-center space-y-1">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#C19A6B]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#8B5E3C]">
                     VIP Showroom Appointment
                   </span>
                   <h3 className="text-2xl font-serif font-bold text-[#111827]">Book Store Visit</h3>
@@ -134,7 +134,7 @@ export default function VirtualShowroom() {
                     placeholder="e.g. Mrs. Sunita Rao"
                     value={bookingData.name}
                     onChange={(e) => setBookingData({ ...bookingData, name: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#00D9D9] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#8B5E3C] focus:outline-none"
                   />
                 </div>
 
@@ -146,7 +146,7 @@ export default function VirtualShowroom() {
                     placeholder="+91 98855 33343"
                     value={bookingData.phone}
                     onChange={(e) => setBookingData({ ...bookingData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#00D9D9] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#8B5E3C] focus:outline-none"
                   />
                 </div>
 
@@ -158,7 +158,7 @@ export default function VirtualShowroom() {
                       required
                       value={bookingData.date}
                       onChange={(e) => setBookingData({ ...bookingData, date: e.target.value })}
-                      className="w-full px-3 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#00D9D9] focus:outline-none"
+                      className="w-full px-3 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#8B5E3C] focus:outline-none"
                     />
                   </div>
                   <div>
@@ -178,7 +178,7 @@ export default function VirtualShowroom() {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-xl bg-[#00D9D9] hover:bg-[#00B8B8] text-[#111827] font-bold text-xs shadow-gold uppercase tracking-wider transition-all"
+                  className="w-full py-3.5 rounded-xl bg-[#8B5E3C] hover:bg-[#6E472B] text-white font-bold text-xs shadow-gold uppercase tracking-wider transition-all cursor-pointer"
                 >
                   Confirm Showroom Appointment
                 </button>
@@ -195,7 +195,7 @@ export default function VirtualShowroom() {
                 <button
                   type="button"
                   onClick={() => setShowModal(false)}
-                  className="px-6 py-2.5 rounded-xl bg-[#C19A6B] text-white text-xs font-bold uppercase tracking-wider"
+                  className="px-6 py-2.5 rounded-xl bg-[#8B5E3C] text-white text-xs font-bold uppercase tracking-wider cursor-pointer"
                 >
                   Done
                 </button>

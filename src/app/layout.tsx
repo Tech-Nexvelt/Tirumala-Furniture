@@ -63,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -73,7 +73,10 @@ export default function RootLayout({
         />
         <JsonLd />
       </head>
-      <body className="bg-[#FAFAF8] text-[#111827] antialiased flex flex-col min-h-screen">
+      <body
+        suppressHydrationWarning
+        className="bg-[#FAFAF8] text-[#111827] antialiased flex flex-col min-h-screen"
+      >
         <SmoothScrollProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

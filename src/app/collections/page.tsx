@@ -15,8 +15,8 @@ export default function CollectionsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Page Hero Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#C19A6B] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#EFEFEA] shadow-sm">
-            <Sparkles className="w-4 h-4 text-[#C19A6B]" /> Handcrafted Masterpieces
+          <span className="text-xs font-bold uppercase tracking-widest text-[#8B5E3C] inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-[#E5E7EB] shadow-sm">
+            <Sparkles className="w-4 h-4 text-[#8B5E3C]" /> Handcrafted Masterpieces
           </span>
           <h1 className="text-4xl sm:text-6xl font-serif font-bold text-[#111827] tracking-tight">
             Curated Teak Wood Collections
@@ -33,7 +33,7 @@ export default function CollectionsPage() {
             return (
               <div
                 key={cat.id}
-                className="bg-white rounded-3xl border border-[#EFEFEA] overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center group hover:border-[#C19A6B] transition-all duration-500"
+                className="bg-white rounded-3xl border border-[#E5E7EB] overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center group hover:border-[#8B5E3C] transition-all duration-500"
               >
                 {/* Collection Photography (7 cols) */}
                 <div
@@ -49,7 +49,7 @@ export default function CollectionsPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                  <span className="absolute bottom-4 left-4 text-xs font-bold text-[#111827] bg-white/95 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-[#EFEFEA] shadow-sm">
+                  <span className="absolute bottom-4 left-4 text-xs font-bold text-[#111827] bg-white/95 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-[#E5E7EB] shadow-sm">
                     {cat.count}+ Exclusive Furniture Models
                   </span>
                 </div>
@@ -61,19 +61,19 @@ export default function CollectionsPage() {
                   }`}
                 >
                   <div className="space-y-3">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#C19A6B] flex items-center gap-1.5">
+                    <span className="text-xs font-bold uppercase tracking-widest text-[#8B5E3C] flex items-center gap-1.5">
                       <ShieldCheck className="w-4 h-4 text-emerald-600" /> 10-Year Warranty
                     </span>
                     <h2 className="text-3xl font-serif font-bold text-[#111827]">{cat.name}</h2>
                     <p className="text-sm text-[#6B7280] leading-relaxed">{cat.description}</p>
                   </div>
 
-                  <div className="pt-4 border-t border-[#EFEFEA]">
+                  <div className="pt-4 border-t border-[#E5E7EB]">
                     <Link
                       href={`/collections/${cat.id}`}
-                      className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#00D9D9] hover:bg-[#00B8B8] text-[#111827] font-bold text-xs shadow-gold hover:scale-105 transition-all uppercase tracking-wider"
+                      className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#8B5E3C] hover:bg-[#6E472B] text-white font-bold text-xs shadow-gold hover:scale-105 transition-all uppercase tracking-wider"
                     >
-                      Explore {cat.name} Collection <ArrowRight className="w-4 h-4" />
+                      Explore {cat.name} Collection <ArrowRight className="w-4 h-4 text-[#C19A6B]" />
                     </Link>
                   </div>
                 </div>

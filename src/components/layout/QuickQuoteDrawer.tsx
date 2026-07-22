@@ -39,16 +39,16 @@ export default function QuickQuoteDrawer({
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onClose} />
 
       <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-white text-[#111827] shadow-2xl border-l border-[#EFEFEA] flex flex-col">
+        <div className="w-screen max-w-md bg-white text-[#111827] shadow-2xl border-l border-[#E5E7EB] flex flex-col">
           {/* Header */}
-          <div className="p-6 border-b border-[#EFEFEA] flex items-center justify-between bg-[#FAFAF8]">
-            <div className="flex items-center gap-2 text-[#C19A6B]">
-              <Sparkles className="w-5 h-5 text-[#C19A6B]" />
+          <div className="p-6 border-b border-[#E5E7EB] flex items-center justify-between bg-[#FAFAF8]">
+            <div className="flex items-center gap-2 text-[#8B5E3C]">
+              <Sparkles className="w-5 h-5 text-[#8B5E3C]" />
               <h3 className="font-serif font-bold text-lg text-[#111827]">Request Official Quote</h3>
             </div>
             <button
               onClick={onClose}
-              className="p-2 text-[#9CA3AF] hover:text-[#111827] rounded-lg hover:bg-gray-100"
+              className="p-2 text-[#9CA3AF] hover:text-[#111827] rounded-lg hover:bg-gray-100 cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -57,8 +57,8 @@ export default function QuickQuoteDrawer({
           {/* Form Content */}
           <div className="p-6 flex-1 overflow-y-auto space-y-6">
             {productName && (
-              <div className="p-4 rounded-2xl bg-[#FAFAF8] border border-[#EFEFEA] space-y-1">
-                <span className="text-[10px] uppercase font-bold text-[#C19A6B]">Item Requested</span>
+              <div className="p-4 rounded-2xl bg-[#FAFAF8] border border-[#E5E7EB] space-y-1">
+                <span className="text-[10px] uppercase font-bold text-[#8B5E3C]">Item Requested</span>
                 <h4 className="font-bold text-sm text-[#111827]">{productName}</h4>
                 {productPrice && (
                   <span className="text-xs font-bold text-[#6B7280] block">
@@ -78,7 +78,7 @@ export default function QuickQuoteDrawer({
                     placeholder="e.g. Dr. Srinivas Rao"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#00D9D9] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#8B5E3C] focus:outline-none"
                   />
                 </div>
 
@@ -90,7 +90,7 @@ export default function QuickQuoteDrawer({
                     placeholder="+91 98855 33343"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#00D9D9] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#8B5E3C] focus:outline-none"
                   />
                 </div>
 
@@ -101,7 +101,7 @@ export default function QuickQuoteDrawer({
                     placeholder="e.g. Siddipet, Hyderabad"
                     value={formData.city}
                     onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#00D9D9] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#8B5E3C] focus:outline-none"
                   />
                 </div>
 
@@ -112,13 +112,13 @@ export default function QuickQuoteDrawer({
                     placeholder="Provide specific dimensions, wood finish, or fabric color preferences..."
                     value={formData.customNotes}
                     onChange={(e) => setFormData({ ...formData, customNotes: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#00D9D9] focus:outline-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAFAF8] border border-[#E5E7EB] text-sm text-[#111827] focus:border-[#8B5E3C] focus:outline-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-[#00D9D9] hover:bg-[#00B8B8] text-[#111827] font-bold text-xs uppercase tracking-wider shadow-gold hover:scale-[1.01] transition-all cursor-pointer"
+                  className="w-full py-4 rounded-xl bg-[#8B5E3C] hover:bg-[#6E472B] text-white font-bold text-xs uppercase tracking-wider shadow-gold hover:scale-[1.01] transition-all cursor-pointer"
                 >
                   Send Quotation Request
                 </button>
@@ -143,7 +143,7 @@ export default function QuickQuoteDrawer({
                   </a>
                   <button
                     onClick={onClose}
-                    className="w-full py-2.5 text-xs text-[#6B7280] font-semibold"
+                    className="w-full py-2.5 text-xs text-[#6B7280] font-semibold cursor-pointer"
                   >
                     Close Window
                   </button>
