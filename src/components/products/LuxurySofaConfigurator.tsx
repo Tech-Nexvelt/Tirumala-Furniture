@@ -290,6 +290,37 @@ export default function LuxurySofaConfigurator() {
               </div>
             </div>
 
+            {/* Save & Share Configuration Controls */}
+            <div className="flex items-center justify-between text-xs text-[#6B7280] pt-2">
+              <button
+                type="button"
+                onClick={() => {
+                  if (typeof window !== "undefined") {
+                    localStorage.setItem(
+                      "saved_sofa_config",
+                      JSON.stringify({ upholstery: selectedUpholstery, wood: selectedWood })
+                    );
+                    alert("Configuration saved successfully!");
+                  }
+                }}
+                className="hover:text-[#111827] font-semibold flex items-center gap-1 cursor-pointer"
+              >
+                💾 Save Configuration
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  if (typeof navigator !== "undefined") {
+                    navigator.clipboard.writeText(window.location.href);
+                    alert("Configuration link copied to clipboard!");
+                  }
+                }}
+                className="hover:text-[#111827] font-semibold flex items-center gap-1 cursor-pointer"
+              >
+                🔗 Share Setup Link
+              </button>
+            </div>
+
             {/* Action CTAs */}
             <div className="space-y-3 pt-3">
               <button

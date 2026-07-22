@@ -1,5 +1,5 @@
 import React from "react";
-import { BRAND_INFO } from "@/lib/data";
+import { BRAND_INFO, FAQS } from "@/lib/data";
 
 export default function JsonLd() {
   const localBusinessSchema = {
@@ -63,6 +63,30 @@ export default function JsonLd() {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.tirumalafurniture.com" },
+      { "@type": "ListItem", position: 2, name: "Collections", item: "https://www.tirumalafurniture.com/collections" },
+      { "@type": "ListItem", position: 3, name: "Products", item: "https://www.tirumalafurniture.com/products" },
+      { "@type": "ListItem", position: 4, name: "Showroom", item: "https://www.tirumalafurniture.com/contact" },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
       <script
@@ -72,6 +96,14 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </>
   );
